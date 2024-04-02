@@ -107,19 +107,21 @@ input[type="text"] {
 
 .result {
   position: absolute;
-  top: 8%;
+  top: 15%;
   right: 0;
   width: 25%;
   background-color: #fff;
   border: 1px solid #ccc;
   border-top: none;
-  border-radius: 50px 50px 5px 5px;
+  border-radius: 25px 25px 5px 5px;
   /* z-index: 1; */
   padding: 5px;
   margin: 5px;
   display: flex;
-  justify-content: center; /* Center horizontally */
+  justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
 
 /* Container Component */

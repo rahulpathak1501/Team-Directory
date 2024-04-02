@@ -34,7 +34,8 @@ export default function NavBar() {
       (person) =>
         person.role.toLowerCase().includes(searchItem.toLowerCase()) ||
         person.first_name.toLowerCase().includes(searchItem.toLowerCase()) ||
-        person.last_name.toLowerCase().includes(searchItem.toLowerCase())
+        person.last_name.toLowerCase().includes(searchItem.toLowerCase()) ||
+        person.email.toLowerCase().includes(searchItem.toLowerCase())
     );
     setSearchResult(searchResults);
   }, [searchItem]);
