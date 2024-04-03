@@ -2,7 +2,7 @@ import { constantList } from "./ActionConstant";
 
 export const initialState = {
   person_list: [],
-  person_role: "",
+  loading: true,
 };
 
 const reducer = (state, action) => {
@@ -14,11 +14,11 @@ const reducer = (state, action) => {
         person_list: action.person_list,
       };
     }
-    case constantList.PERSON_ROLE: {
+    case constantList.SET_LOADING: {
       // console.log("reducer", action);
       return {
         ...state,
-        person_role: action.person_role,
+        loading: action.loading,
       };
     }
     default:

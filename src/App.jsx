@@ -12,6 +12,7 @@ function App() {
       {/* <Data/> */}
       <NavBar />
       <Administrators />
+      <hr />
       <Members />
     </>
   );
