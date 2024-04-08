@@ -1,19 +1,21 @@
 import React, { useEffect, useState } from "react";
 import jsonData from "../assets/data.json";
-// import { useStateProvider } from "../redux/StateProvider";
-// import { constantList } from "../redux/ActionConstant";
+import { useStateProvider } from "../redux/StateProvider";
+import { constantList } from "../redux/ActionConstant";
 
 export default function Members() {
   const [members, setMembers] = useState([]);
-  //   const [{ person_list }, dispatch] = useStateProvider();
+  const [{ person_list }, dispatch] = useStateProvider();
 
-  // useEffect(()=>{
-  //     setMembers(jsonData.filter((person) => person.role === "member"));
-  // },[])
+  // console.log(person_list);
 
   useEffect(() => {
-    setMembers(jsonData.filter((person) => person.role === "member"));
-  }, []);
+    setMembers(person_list.filter((person) => person.role === "member"));
+  }, [person_list]);
+
+  // useEffect(() => {
+  //   setMembers(jsonData.filter((person) => person.role === "member"));
+  // }, []);
   //   console.log(members);
   return (
     <div className="container">
